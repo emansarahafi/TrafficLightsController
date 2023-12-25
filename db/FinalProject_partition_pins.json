@@ -1,0 +1,153 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "O0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "O0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "O0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "O0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "O0[2]",
+					"strict" : false
+				},
+				{
+					"name" : "O0[1]",
+					"strict" : false
+				},
+				{
+					"name" : "O0[0]",
+					"strict" : false
+				},
+				{
+					"name" : "O1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "O1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "O1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "O1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "O1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "O1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "O1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Ar",
+					"strict" : false
+				},
+				{
+					"name" : "Ay",
+					"strict" : false
+				},
+				{
+					"name" : "Ag",
+					"strict" : false
+				},
+				{
+					"name" : "Br",
+					"strict" : false
+				},
+				{
+					"name" : "By",
+					"strict" : false
+				},
+				{
+					"name" : "Bg",
+					"strict" : false
+				},
+				{
+					"name" : "Cr",
+					"strict" : false
+				},
+				{
+					"name" : "Cy",
+					"strict" : false
+				},
+				{
+					"name" : "Cg",
+					"strict" : false
+				},
+				{
+					"name" : "Dg",
+					"strict" : false
+				},
+				{
+					"name" : "Er",
+					"strict" : false
+				},
+				{
+					"name" : "Ey",
+					"strict" : false
+				},
+				{
+					"name" : "Eg",
+					"strict" : false
+				},
+				{
+					"name" : "Fr",
+					"strict" : false
+				},
+				{
+					"name" : "Fy",
+					"strict" : false
+				},
+				{
+					"name" : "Fg",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "Sd",
+					"strict" : false
+				},
+				{
+					"name" : "Sa",
+					"strict" : false
+				},
+				{
+					"name" : "Se",
+					"strict" : false
+				},
+				{
+					"name" : "Sf",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
