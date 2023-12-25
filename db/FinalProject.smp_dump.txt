@@ -1,0 +1,16 @@
+
+State Machine - |FinalProject|FiniteStateMachine:FSM|Pst
+Name Pst.S12 Pst.S11 Pst.S10 Pst.S9 Pst.S8 Pst.S7 Pst.S6 Pst.S5 Pst.S4 Pst.S3 Pst.S2 Pst.S1 Pst.S0 
+Pst.S0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+Pst.S1 0 0 0 0 0 0 0 0 0 0 0 1 1 
+Pst.S2 0 0 0 0 0 0 0 0 0 0 1 0 1 
+Pst.S3 0 0 0 0 0 0 0 0 0 1 0 0 1 
+Pst.S4 0 0 0 0 0 0 0 0 1 0 0 0 1 
+Pst.S5 0 0 0 0 0 0 0 1 0 0 0 0 1 
+Pst.S6 0 0 0 0 0 0 1 0 0 0 0 0 1 
+Pst.S7 0 0 0 0 0 1 0 0 0 0 0 0 1 
+Pst.S8 0 0 0 0 1 0 0 0 0 0 0 0 1 
+Pst.S9 0 0 0 1 0 0 0 0 0 0 0 0 1 
+Pst.S10 0 0 1 0 0 0 0 0 0 0 0 0 1 
+Pst.S11 0 1 0 0 0 0 0 0 0 0 0 0 1 
+Pst.S12 1 0 0 0 0 0 0 0 0 0 0 0 1 
