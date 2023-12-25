@@ -1,0 +1,18 @@
+Fitter Status : Successful - Sat Apr 30 21:01:17 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : FinalProject
+Top-level Entity Name : FinalProject
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 340 / 49,760 ( < 1 % )
+    Total combinational functions : 337 / 49,760 ( < 1 % )
+    Dedicated logic registers : 62 / 49,760 ( < 1 % )
+Total registers : 62
+Total pins : 36 / 360 ( 10 % )
+Total virtual pins : 0
+Total memory bits : 0 / 1,677,312 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

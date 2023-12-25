@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sat Apr 30 21:00:56 2022
+Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Revision Name : FinalProject
+Top-level Entity Name : FinalProject
+Family : MAX 10
+Total logic elements : 339
+    Total combinational functions : 336
+    Dedicated logic registers : 62
+Total registers : 62
+Total pins : 36
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

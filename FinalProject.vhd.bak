@@ -1,0 +1,51 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity FinalProject is
+	port (clk: in std_logic;
+			Sa, Sd, Se, Sf : in std_logic;
+			O1 : out std_logic_vector (0 to 6);
+			O2 : out std_logic_vector (0 to 6);
+			Ar, Ay, Ag, Br, By, Bg, Cr, Cy, Cg, Dg, Er, Ey, Eg, Fr, Fy, Fg : out std_logic;
+			);
+end FinalProject;
+
+architecture model of FinalProject is
+component Timer60 is
+	port (clk: in std_logic;
+			count : out std_logic_vector (7 downto 0));
+end component;
+component Timer30 is
+	port (clk: in std_logic;
+			count : out std_logic_vector (7 downto 0));
+end component;
+component Timer20 is
+	port (clk: in std_logic;
+			count : out std_logic_vector (7 downto 0));
+end component;
+component Timer10 is
+	port (clk: in std_logic;
+			count : out std_logic_vector (7 downto 0));
+end component;
+component Timer5 is
+	port (clk: in std_logic;
+			count : out std_logic_vector (7 downto 0));
+end component;
+component Timer2 is
+	port (clk: in std_logic;
+			count : out std_logic_vector (7 downto 0));
+end component;
+component Timer1 is
+	port (clk: in std_logic;
+			count : out std_logic_vector (7 downto 0));
+end component;
+component HEXtoBCD is
+	port (A : in std_logic_vector (7 downto 0);
+			Z : out std_logic_vector (7 downto 0));
+end component;
+component BCDto7Seg is
+	port (A : in std_logic_vector (3 downto 0);
+			Z : out std_logic_vector (0 to 6));
+end component;
