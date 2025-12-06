@@ -29,9 +29,6 @@ A VHDL-based traffic light controller system implementing an Algorithm State Mac
     - [Required Components](#required-components)
     - [Pin Assignments](#pin-assignments)
   - [Testing \& Results](#testing--results)
-    - [Verification](#verification)
-    - [Known Issues (Original Implementation)](#known-issues-original-implementation)
-    - [Fixes Applied](#fixes-applied)
   - [Conclusion](#conclusion)
 
 ## Objective
@@ -301,27 +298,12 @@ Refer to the Quartus project settings file (\`FinalProject.qsf\`) for complete p
 
 ## Testing & Results
 
-### Verification
-
 The system was tested by:
 
 1. Compiling the VHDL modules in Quartus without errors
 2. Programming the Terrasic DE-10 Lite board
 3. Connecting physical traffic light LEDs and sensors
 4. Observing state transitions according to the ASM flow
-
-### Known Issues (Original Implementation)
-
-- Counter reset logic was not functioning properly between states
-- State S9 and S12 could get stuck without proper fallback transitions
-- Timer counting direction inconsistency
-
-### Fixes Applied
-
-✅ Counter reset signal properly implemented  
-✅ All state transitions include fallback conditions  
-✅ Timer90 and Counter60 synchronized counting logic  
-✅ No compilation errors
 
 ## Conclusion
 
