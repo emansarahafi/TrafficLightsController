@@ -11,11 +11,12 @@ entity FiniteStateMachine is
 end FiniteStateMachine;
 
 architecture model of FiniteStateMachine is
-component Experiment05PartA is
+component ClockDivider is
 port (clkin : in std_logic;
 		clkout : out std_logic);
 end component;
-component Counter60 is
+component GenericCounter is
+	generic (MAX_COUNT: integer := 60);
 	port (clk, Clr : in std_logic;
 			values : out std_logic_vector (7 downto 0));
 end component;
@@ -108,13 +109,11 @@ begin
 						  elsif ((Se = '1' or Sf = '1') and Sa = '0') then Nst <= S0;
 						  else Nst <= S0;
 						  end if;
-			end case;
-		end process;
+		end case;
+	end process;
 
-Clock : Experiment05PartA port map(clk, clkout);
-C60: Counter60 port map (clk, counter_reset, count60);
-	
-Ar <= lights(15);
+Clock : ClockDivider port map(clk, clkout);
+C60: GenericCounter generic map (MAX_COUNT => 60) port map (clk, counter_reset, count60);Ar <= lights(15);
 Ay <= lights(14);
 Ag <= lights(13);
 Br <= lights(12);

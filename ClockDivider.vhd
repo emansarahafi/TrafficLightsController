@@ -3,12 +3,12 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_unsigned.all;
 
-entity Experiment05PartA is
+entity ClockDivider is
 port (clkin : in std_logic;
 		clkout : out std_logic);
-end Experiment05PartA;
+end ClockDivider;
 
-architecture behavioural of Experiment05PartA is
+architecture behavioural of ClockDivider is
 signal count : integer := 0;
 signal clk : std_logic := '0';
 begin

@@ -84,12 +84,10 @@ Design and implement a traffic light controller that:
 
 - **\`FinalProject.vhd\`** - Top-level entity integrating all components
 - **\`FiniteStateMachine.vhd\`** - FSM controlling traffic light state transitions
-- **\`Timer90.vhd\`** - 90-second countdown timer for display
-- **\`Counter60.vhd\`** - 60-second counter for state timing
-- **\`Experiment05PartA.vhd\`** - Clock divider (50 MHz to 1 Hz)
+- **\`GenericCounter.vhd\`** - Parameterized counter (configurable max count 1-255)
+- **\`ClockDivider.vhd\`** - Clock divider (50 MHz to 1 Hz)
 - **\`HEXtoBCD.vhd\`** - Hexadecimal to BCD converter
 - **\`BCDto7Seg.vhd\`** - BCD to 7-segment display decoder
-- **Timer modules** - Counter01, Counter02, Counter05, Counter10, Counter20, Counter30
 
 ### Configuration Files
 
@@ -102,8 +100,8 @@ Design and implement a traffic light controller that:
 ### Control Units
 
 1. **Clock Pulse Converter** - Converts onboard 50 MHz to 1 Hz
-2. **Timing System** - Counter (0-60) with state-based reset
-3. **Timer Display** - Countdown timer (90-0) for East segment
+2. **Timing System** - GenericCounter (0-60) with state-based reset
+3. **Timer Display** - GenericCounter countdown (90-0) for East segment
 4. **HEX to BCD Converter** - Converts timer output for display
 5. **BCD to 7-Segment Decoders** - Drives two 7-segment displays
 
@@ -207,8 +205,8 @@ graph TB
     
     subgraph "Clock & Timing"
         CLOCK[Clock Divider<br/>50MHz → 1Hz]
-        COUNTER[Counter60<br/>0-60 Timer]
-        TIMER[Timer90<br/>Countdown Display]
+        COUNTER[GenericCounter<br/>MAX_COUNT=60<br/>State Timer]
+        TIMER[GenericCounter<br/>MAX_COUNT=90<br/>Countdown Display]
     end
     
     subgraph "Control Logic"
@@ -311,10 +309,10 @@ This project successfully demonstrates:
 
 - ASM-based FSM design from real-world requirements
 - Clock pulse conversion using VHDL
-- Modulo-N counter implementation for timing systems
+- Generic parameterized counter design for reusable timing modules
 - Hexadecimal to BCD conversion using mathematical operations
 - 7-segment display interfacing
 - Sensor-based conditional state transitions
 - Complete hardware-software integration on FPGA
 
-The system provides a functional traffic light controller that responds to sensor inputs and manages complex multi-segment traffic flow according to specified timing and conditions.
+The system provides a functional traffic light controller that responds to sensor inputs and manages complex multi-segment traffic flow according to specified timing and conditions. The use of a single `GenericCounter` module demonstrates efficient code reusability and maintainability in VHDL design.
