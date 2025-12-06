@@ -272,17 +272,6 @@ graph TB
 
 ### Circuit Images
 
-> **Note:** To add circuit images from the Word document:
->
-> 1. Open the Word document
-> 2. Right-click on each image and select "Save as Picture..."
-> 3. Save images to the `images/` folder with descriptive names:
->    - `circuit-top-view.jpg` - Top view of hardware implementation
->    - `circuit-powered-off.jpg` - Circuit when powered off  
->    - `circuit-working.jpg` - Circuit in operation
->    - `block-diagram.png` - System block diagram (if available)
-> 4. The images will automatically display below
-
 ![Circuit Top View](images/circuit-top-view.jpg)
 *Top view of the traffic light controller circuit implementation*
 
