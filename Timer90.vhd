@@ -21,11 +21,10 @@ architecture behaviour of Timer90 is
 		Clock : Experiment05PartA port map(clk, clkout);
 		process (clk, Clr)
 		begin
-			if (Clr = '1') then CNT <= 90;
+			if (Clr = '1') then CNT <= 0;
 				elsif (clkout'event and clkout = '1') then
-						if (CNT = N-1) then CNT <= CNT-1;
-						elsif (CNT = 0) then CNT <= 0;
-						else CNT <= CNT-1;
+						if (CNT >= N) then CNT <= 0;
+						else CNT <= CNT + 1;
 						end if;
 			end if;
  end process;

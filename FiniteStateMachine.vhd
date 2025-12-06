@@ -25,6 +25,7 @@ signal Pst, Nst : States;
 signal clkout : std_logic;
 signal lights : std_logic_vector (15 downto 0);
 signal count60 : std_logic_vector (7 downto 0);
+signal counter_reset : std_logic;
 constant T60 : std_logic_vector := "00111100";
 constant T30 : std_logic_vector := "00011110";
 constant T20 : std_logic_vector := "00010100";
@@ -38,9 +39,14 @@ begin
 	begin
 		if Reset = '1' then
 		Pst <= S0;
+		counter_reset <= '1';
 		elsif clkout'event and clkout = '1' then
+			if Pst /= Nst then
+				counter_reset <= '1';
+			else
+				counter_reset <= '0';
+			end if;
 			Pst <= Nst;
-			count60 <= count60;
 		end if;
 	end process;
 	
@@ -70,7 +76,7 @@ begin
 			when S5 => lights <= "0101000010100100";
 						  if count60 < T02 then Nst <= S5;
 						  elsif (Sd = '1') then Nst <= S8;
-						  elsif (Sd = '0') then Nst <= S6;
+						  else Nst <= S6;
 						  end if;
 			when S6 => lights <= "1001000011100100";
 						  if count60 < T10 then Nst <= S6;
@@ -85,9 +91,10 @@ begin
 			           else Nst <= S9;
 						  end if;
 			when S9 => lights <= "1001001000001001";
-						  if count60 < T20 then Nst <= S9;
-						  elsif ((Se = '0' or Sf = '0') and Sa = '1') then Nst <= S10;
-						  end if;
+					  if count60 < T20 then Nst <= S9;
+					  elsif ((Se = '0' or Sf = '0') and Sa = '1') then Nst <= S10;
+					  else Nst <= S0;
+					  end if;
 			when S10 => lights <= "1001001000001001";
 						  if count60 < T05 then Nst <= S10;
 			           else Nst <= S11;
@@ -99,12 +106,13 @@ begin
 			when S12 => lights <= "0100101000100100";
 						  if count60 < T02 then Nst <= S12;
 						  elsif ((Se = '1' or Sf = '1') and Sa = '0') then Nst <= S0;
+						  else Nst <= S0;
 						  end if;
 			end case;
 		end process;
 
 Clock : Experiment05PartA port map(clk, clkout);
-C60: Counter60 port map (clk, Reset, count60);
+C60: Counter60 port map (clk, counter_reset, count60);
 	
 Ar <= lights(15);
 Ay <= lights(14);

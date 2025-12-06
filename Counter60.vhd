@@ -21,13 +21,12 @@ architecture behaviour of Counter60 is
 		Clock : Experiment05PartA port map(clk, clkout);
 		process (clk, Clr)
 		begin
-			if (Clr = '1') then CNT <= 0;
-				elsif (clkout'event and clkout = '1') then
-						if (CNT = N-1) then CNT <= CNT + 1;
-						elsif (CNT = N) then CNT <= 0;
-						else CNT <= CNT + 1;
-						end if;
-			end if;
+		if (Clr = '1') then CNT <= 0;
+			elsif (clkout'event and clkout = '1') then
+					if (CNT >= N) then CNT <= 0;
+					else CNT <= CNT + 1;
+					end if;
+		end if;
  end process;
  
 values <= conv_std_logic_vector(CNT,8);
