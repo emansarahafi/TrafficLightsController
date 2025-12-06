@@ -1,0 +1,73 @@
+# Quartus II generated files
+*.rpt
+*.summary
+*.smsg
+*.done
+*.eqn
+*.pin
+*.qpf.bak
+*.qsf.bak
+*.sof
+*.pof
+*.jdi
+*.stp
+*.html
+*.htm
+
+# Quartus II simulation files
+*.vwf
+*.sdo
+*.sft
+
+# Database and incremental compilation files
+db/
+incremental_db/
+
+# Output files
+output_files/
+
+# VHDL backup files
+*.bak
+*.vhd.bak
+
+# Quartus workspace files
+*.qws
+
+# ModelSim/QuestaSim files
+work/
+*.wlf
+*.vstf
+*.mti
+transcript
+vsim.wlf
+
+# Waveform files
+*.vcd
+
+# Pin planner files
+*.pin.bak
+
+# Timing Analyzer files
+*.sta.rpt
+*.sta.summary
+
+# Assembler files
+*.pof
+*.sof
+*.rbf
+*.ttf
+*.ipl
+*.hexout
+
+# Assignment files backup
+*.qsf.bak
+*.qpf.bak
+
+# MacOS files
+.DS_Store
+._*
+
+# Temporary files
+*~
+*.swp
+*.tmp
